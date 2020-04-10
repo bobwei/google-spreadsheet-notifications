@@ -3,7 +3,7 @@
   "version": "",
   "description": "",
   "scripts": {
-    "dev": "nodemon src/index.ts --exec babel-node --extensions \".ts,.tsx\"",
+    "dev": "nodemon src/index.js --exec babel-node",
     "start": "node lib/index.js",
     "build": "yarn clean && babel src --out-dir lib --copy-files --extensions \".ts,.tsx\"",
     "test": "jest",
@@ -40,7 +40,10 @@
     "rimraf": "^3.0.2",
     "typescript": "^3.8.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.19.2",
+    "ramda": "^0.27.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"

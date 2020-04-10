@@ -12,6 +12,9 @@
     "global-require": 0,
     "no-underscore-dangle": 0,
     "react/jsx-filename-extension": 0,
+    "import/no-dynamic-require": 0,
+    "no-restricted-syntax": 0,
+    "guard-for-in": 0,
     "no-console": 0
   }
 }
