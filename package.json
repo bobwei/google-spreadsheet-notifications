@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon src/index.js --exec babel-node",
     "start": "node lib/index.js",
-    "build": "yarn clean && babel src --out-dir lib --copy-files --extensions \".ts,.tsx\"",
+    "build": "yarn clean && babel src --out-dir lib --copy-files",
+    "heroku-postbuild": "yarn build",
     "test": "jest",
     "clean": "rimraf lib"
   },
