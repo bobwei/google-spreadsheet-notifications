@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import * as R from 'ramda';
 
 import getEntry from './functions/getEntry';
@@ -9,8 +10,7 @@ import indexByRow from './functions/indexByRow';
 import notify from './functions/notify';
 
 function main() {
-  const config = require('../dist/config.json');
-  const { sheetJsonUrl, rules, nofitications } = config;
+  const { sheetJsonUrl, rules, nofitications } = JSON.parse(process.env.CONFIG_JSON);
   getEntry(sheetJsonUrl)
     .then((entry) => {
       const maxRow = getMaxRow(entry);
